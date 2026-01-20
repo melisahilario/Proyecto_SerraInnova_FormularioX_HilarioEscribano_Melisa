@@ -18,7 +18,7 @@ class PaginaTipoConsulta extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: service.tiposConsulta.length,
       itemBuilder: (context, index) {
-        final tipo = service.tiposConsulta[index];
+        final tipo = service.tiposConsulta[index]; // las seleciona de providers
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8),
           child: ListTile(
@@ -41,7 +41,7 @@ class PaginaTipoConsulta extends StatelessWidget {
               children: [
                 const SizedBox(height: 40),
                 Text(
-                  '¿En qué podemos ayudarte?', // ← FRASE PRINCIPAL
+                  '¿En qué podemos ayudarte?',
                   style: theme.textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: Colors.green[900],
@@ -78,25 +78,6 @@ class PaginaTipoConsulta extends StatelessWidget {
                 children: [
                   Expanded(child: lista),
                   const SizedBox(width: 40),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        // Opcional: imagen de fondo sostenible
-                        Container(
-                          height: 300,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            image: const DecorationImage(
-                              image: NetworkImage(
-                                'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-                              ),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ),
