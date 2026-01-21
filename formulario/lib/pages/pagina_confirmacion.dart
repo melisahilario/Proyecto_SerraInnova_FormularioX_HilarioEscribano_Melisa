@@ -16,7 +16,7 @@ class PaginaConfirmacion extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.eco, size: 120, color: Colors.green),
+              Image.asset('assets/images/logo.png', width: 120, height: 120),
               const SizedBox(height: 24),
               const Text(
                 '¡Gracias por contactar con SERRA INNOVA!',

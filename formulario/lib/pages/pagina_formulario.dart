@@ -94,9 +94,11 @@ class _PaginaFormularioState extends State<PaginaFormulario> {
                     TextFormField(
                       controller: _telefonoCtrl,
                       keyboardType: TextInputType.phone,
+                      maxLength: 15,
                       decoration: const InputDecoration(
                         labelText: 'Teléfono (opcional)',
                         border: OutlineInputBorder(),
+                        counterText: '',
                       ),
                     ),
                     const SizedBox(height: 16),
